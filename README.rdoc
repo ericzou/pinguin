@@ -1,6 +1,6 @@
 # Pinguin
 
-Pinguin is performance tool built on top of PhantomJS
+Pinguin is performance testing tool built on top of PhantomJS
 
 ## Setup
 TODO
