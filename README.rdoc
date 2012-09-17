@@ -1,0 +1,12 @@
+# Pinguin
+
+Pinguin is performance tool built on top of PhantomJS
+
+## Setup
+TODO
+
+## Useage
+TODO
+
+
+This project rocks and uses MIT-LICENSE.

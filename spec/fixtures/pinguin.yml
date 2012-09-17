@@ -1,0 +1,29 @@
+# credential:
+#   url: http://localhost:3000/users/sign_in
+#   loginForm: '#new_user'
+#   username_field: 'user[email]'
+#   password_field: 'user[password]'
+#   username: 'foo'
+#   password: 'bar'
+
+# urls:
+#   - http://localhost:3000/
+#   - http://localhost:3000/studies/2/study_countries
+#   - http://localhost:3000/study_countries/2
+#   - http://localhost:3000/principal_investigators/53
+
+# ignore_bad_ssl: true
+
+# info: basic
+
+# format: plain
+
+urls:
+  - http://localhost:8070/
+
+info: basic
+
+format: plain
+
+
+
