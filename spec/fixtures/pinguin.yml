@@ -21,9 +21,9 @@
 urls:
   - http://localhost:8070/
 
-info: basic
+info: bare
 
-format: plain
+format: json
 
 
 

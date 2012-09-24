@@ -19,8 +19,8 @@ module Pinguin
       end
     end
 
-    def initialize(options={})
-      @config = ActiveSupport::HashWithIndifferentAccess.new(options[:conf])
+    def initialize(config)
+      @config = ActiveSupport::HashWithIndifferentAccess.new(config)
     end
 
     def credential

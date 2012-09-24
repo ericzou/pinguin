@@ -5,4 +5,5 @@ module Pinguin
   autoload :Settings, 'pinguin/settings'
   autoload :Cookie, 'pinguin/cookie'
   autoload :Result, 'pinguin/Result'
+  autoload :Reporter, 'pinguin/reporter'
 end

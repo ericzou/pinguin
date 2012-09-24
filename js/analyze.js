@@ -18,9 +18,12 @@ urls.forEach(function(url) {
   casper.then(function() {
     t = Date.now();
     result = { url: url, startedAt: new Date(t)};
+    casper.on('load.failed', function(){
+      result.status = 'loadFailed';
+    });
     casper.open(url).then(function() {
       s = Date.now() - t;
-      result.loadingTime = s;
+      result.loadTime = s;
       // console.log('Started at ' + new Date(t) + ' Loading time ' + s + ' msec');
     });
     results.push(result);

@@ -3,7 +3,7 @@ module Pinguin
 
     attr_reader :settings, :cookie, :result
     def initialize(options={})
-      @settings = Pinguin::Settings.new(:conf => options[:conf])
+      @settings = options[:settings] || Pinguin::Settings.new(options.delete(:conf))
     end
 
     def urls
@@ -41,9 +41,10 @@ module Pinguin
       begin
         require 'open3'
         std_in, std_out, std_error = Open3.popen3(cmd)
-        @result = Pinguin::Result.new(JSON.parse(std_out.readline), :format => settings.format, :info => settings.info)
+      @reporter = Pinguin::Reporter.new(JSON.parse(std_out.readline), :format => settings.format || "json", :info => settings.info || 'bare')
+      @reporter
       rescue Exception => e
-        puts "error when trying to analyze! #{e.message}, #{e.backtrace.join("\n")}"
+        puts "error when trying to analyze! #{e.message}, #{e.class}, #{e.backtrace.join("\n")}"
       end
     end
 

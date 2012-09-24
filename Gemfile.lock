@@ -2,7 +2,9 @@ PATH
   remote: .
   specs:
     pinguin (0.0.1)
+      rack
       rails (~> 3.2.8)
+      thor
 
 GEM
   remote: http://rubygems.org/
