@@ -41,8 +41,8 @@ module Pinguin
       begin
         require 'open3'
         std_in, std_out, std_error = Open3.popen3(cmd)
-      @reporter = Pinguin::Reporter.new(JSON.parse(std_out.readline), :format => settings.format || "json", :info => settings.info || 'bare')
-      @reporter
+        @reporter = Pinguin::Reporter.new(JSON.parse(std_out.readline), :format => settings.format || "json", :info => settings.info || 'bare')
+        @reporter
       rescue Exception => e
         puts "error when trying to analyze! #{e.message}, #{e.class}, #{e.backtrace.join("\n")}"
       end

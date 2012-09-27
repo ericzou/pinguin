@@ -8,13 +8,12 @@ module Pinguin
     class Base < Thor
 
       desc "test_loading_time", "test page loading time"
-      method_option :file, :type => 'string', :banner => 'CONFIGFILE', :desc => 'Give a config file'
+      method_option :file, :type => 'string', :desc => 'Give a config file'
 
       def test_loading_time
         conf = options[:file]
         session = Pinguin::Session.new(:conf => YAML::load_file(conf))
-        session.analyze!
-        puts session.result.to_s
+        puts session.analyze!.report
       end
 
     end

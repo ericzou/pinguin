@@ -1,6 +1,4 @@
 module Pinguin
-
-
   class Info
 
     ALL = [:url, :startedAt, :status, :loadTime]
@@ -52,5 +50,4 @@ module Pinguin
       data
     end
   end
-
 end
