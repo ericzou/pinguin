@@ -6,4 +6,5 @@ module Pinguin
   autoload :Cookie, 'pinguin/cookie'
   autoload :Result, 'pinguin/Result'
   autoload :Reporter, 'pinguin/reporter'
+  autoload :Request, 'pinguin/request'
 end
