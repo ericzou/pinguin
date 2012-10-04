@@ -7,4 +7,15 @@ module Pinguin
   autoload :Result, 'pinguin/Result'
   autoload :Reporter, 'pinguin/reporter'
   autoload :Request, 'pinguin/request'
+  autoload :CasperJs, 'pinguin/casper_js'
+
+  class << self
+    attr_accessor :config
+
+    def run(requests)
+      requests_json = jsonify_requests(requests)
+      casperjs = Pinguin::CasperJs.new(requests_json)
+      casperjs.run
+    end
+  end
 end
